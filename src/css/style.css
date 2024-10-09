@@ -1,0 +1,292 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.collapse-block {
+    width: 33%;
+    padding: 15px;
+    margin: 0 auto;
+    border: 1px solid #000000;
+    border-radius: 10px;
+}
+
+.collapse-block button {
+    background-color: #00ffff;
+    padding: 5px;
+    font-size: 13px;
+    border: 1px solid #000000;
+}
+
+.collapse-text-block {
+    border: 1px solid transparent;
+    padding: 5px;
+    margin: 5px;
+    display: block;
+    overflow: hidden;
+    line-height: 0;
+    color: transparent;
+    transition: all .3s linear;
+}
+
+.collapse-active {
+    border: 1px solid #000000;
+    line-height: 1;
+    color: black
+}
+
+.clb-chat {
+    border-radius: 50%;
+    border: 0;
+    /* position: fixed;
+    right: 60px;
+    bottom: 90px; */
+}
+
+.clb-main-btn {
+    position: fixed;
+    right: 60px;
+    bottom: 90px;
+    width: 60px;
+    height: 60px;
+    background-color: #ff0000;
+    border-radius: 50%;
+    border: 0px;
+    cursor: pointer;
+    transform: scale(0);
+    opacity: 0;
+    transition: all 100ms linear;
+}
+
+.clb-chat .clb-main-btn:hover {
+    width: 80px;
+    height: 80px;
+    right: 50px;
+    bottom: 80px;
+}
+
+.clb-active {
+    transform: scale(1);
+    opacity: 1;
+}
+
+.chat-block {
+    width: 350px;
+    border-radius: 0;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0px 0px 30px 10px #D8D8D8;
+    position: fixed;
+    right: 100px;
+    bottom: 100px;
+    transform: scale(1);
+    opacity: 1;
+    transition: all .1s linear;
+}
+
+.chat-send {
+    padding: 5px;
+    border-radius: 10px;
+    border: 1px solid #000000;
+}
+
+.chat-close {
+    background-color: transparent;
+    border: 0;
+    cursor: pointer;
+}
+
+.chat-head {
+    display: flex;
+    justify-content: space-between;
+}
+
+.chat-head-text {
+    font-size: 25px;
+}
+
+.chat-body textarea{
+    width: 100%;
+    min-height: 150px;
+    resize: none;
+    border-radius: 10px;
+    border: 1px solid #000000;
+    padding: 10px;
+}
+
+.chat-active {
+    visibility: hidden;
+    transform: scale(0.9);
+    opacity: 0;
+}
+
+.like-block {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+.heart-spawn-btn {
+    font-size: 15px;
+    padding: 10px 20px;
+    background-color: #e93434;
+    color: #ffffff;
+    border: 0;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.heart-icon {
+    position: absolute;
+    animation-duration: 500ms;
+    animation-timing-function: ease-out;
+}
+
+.for-correct-block {
+    position: relative;
+    transform: translateX(-50%);
+}
+
+.random-like-first {
+    animation-name: like1;
+}
+
+.random-like-second {
+    animation-name: like2;
+}
+
+.random-like-thirth {
+    animation-name: like3;
+}
+
+.random-like-fourth {
+    animation-name: like4;
+}
+
+@keyframes like1{
+    0% {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
+        opacity: 0.8
+    }
+    25% {
+        left: 0%;
+        top: -50px;
+        opacity: 0.6
+    }
+    50% {
+        left: 50%;
+        transform: translateX(-50%);
+        top: -100px;
+        opacity: 0.4
+    }
+    75% {
+        left: 100%;
+        top: -150px;
+        opacity: 0.2
+    }
+    100% {
+        left: 50%;
+        transform: translateX(-50%);
+        top: -200px;
+        opacity: 0
+    }
+}
+
+@keyframes like2{
+    0% {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
+        opacity: 0.8
+    }
+    25% {
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0.6;
+        top: -50px;
+    }
+    50% {
+        left: 100%;
+        top: -100px;
+        opacity: 0.4
+    }
+    75% {
+        left: 0%;
+        top: -150px;
+        opacity: 0.2
+    }
+    100% {
+        left: 50%;
+        transform: translateX(-50%);
+        top: -200px;
+        opacity: 0
+    }
+}
+
+@keyframes like3{
+    0% {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
+        opacity: 0.8
+    }
+    25% {
+        left: 50%;
+        transform: translateX(-50%);
+        top: -50px;
+        opacity: 0.6
+    }
+    50% {
+        left: 100%;
+        top: -100px;
+        opacity: 0.4
+    }
+    75% {
+        left: 0%;
+        top: -150px;
+        opacity: 0.2
+    }
+    100% {
+        left: 50%;
+        transform: translateX(-50%);
+        top: -200px;
+        opacity: 0
+    }
+}
+
+@keyframes like4{
+    0% {
+        left: 50%;
+        transform: translateX(-50%);
+        top: 0;
+        opacity: 0.8
+    }
+    25% {
+        left: 100%;
+        top: -50px;
+        opacity: 0.6
+    }
+    50% {
+        left: 50%;
+        transform: translateX(-50%);
+        top: -100px;
+        opacity: 0.4
+    }
+    75% {
+        left: 0%;
+        top: -150px;
+        opacity: 0.2
+    }
+    100% {
+        left: 50%;
+        transform: translateX(-50%);
+        top: -200px;
+        opacity: 0
+    }
+}
